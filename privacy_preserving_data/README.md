@@ -1,9 +1,19 @@
 # Privacy-Preserving Data Transformation
 
-The question in this project was whether personal data could be transformed so that the original values are difficult to recover while Linear Regression keeps the same predictive quality.
+Protecting personal features with an invertible linear transformation while preserving regression quality.
 
-I used multiplication by an invertible random matrix and checked the transformation both mathematically and experimentally. After encoding the feature matrix, I trained the same regression model on the original and transformed data and compared R².
+## Result
 
-The predictive quality was preserved after the transformation.
+R² remained 0.435 before and after transformation.
 
-This project was mainly an exercise in linear algebra and its application to data protection.
+## What this project demonstrates
+
+Linear algebra, privacy transformation, linear regression, invariance proof.
+
+## Notebook
+
+See [`privacy_preserving_data.ipynb`](privacy_preserving_data.ipynb) for the complete analysis.
+
+## Data availability
+
+This project was completed as part of the Yandex Practicum Data Science programme. The original dataset is not redistributed here. Paths may need to be adjusted before rerunning the notebook in a different environment.

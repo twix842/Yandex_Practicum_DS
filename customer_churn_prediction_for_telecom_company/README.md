@@ -1,16 +1,19 @@
 # Customer Churn Prediction
 
-This was the final project of the Yandex Practicum Data Science program.
+Predicting telecom customer churn from contract, service, and billing data.
 
-The goal was to predict customer churn for a telecom company using contract, service and customer data. I worked through data integration, preprocessing, feature engineering and model comparison, then evaluated the selected model on a separate test set.
+## Result
 
-I compared Random Forest, LightGBM and CatBoost. CatBoost performed best.
+CatBoost achieved a test ROC-AUC of 0.914 and accuracy of 0.925.
 
-**Final test metrics**
+## What this project demonstrates
 
-- ROC-AUC: **0.914**
-- Accuracy: **0.925**
+Classification, feature engineering, catboost, lightgbm, cross-validation, roc analysis.
 
-I also reviewed feature importance to understand which variables contributed most to the model.
+## Notebook
 
-The full notebook contains the complete analysis; `analysis.py` is a compact version of the modeling stage.
+See [`customer_churn_prediction_for_telecom_company.ipynb`](customer_churn_prediction_for_telecom_company.ipynb) for the complete analysis.
+
+## Data availability
+
+This project was completed as part of the Yandex Practicum Data Science programme. The original dataset is not redistributed here. Paths may need to be adjusted before rerunning the notebook in a different environment.

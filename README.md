@@ -1,26 +1,27 @@
 # Data Science Portfolio
 
-Selected projects from my Data Science training at Yandex Practicum.
+I am a physician specialising in anaesthesiology and intensive care, with additional training in data science. This repository contains selected machine-learning projects that demonstrate practical work with classification, regression, natural-language processing, time series, uncertainty estimation, and privacy-preserving transformations.
 
-I am a physician with a professional interest in clinical research, statistics, and machine learning. This repository documents my general data-science training outside medicine and includes tabular machine learning, NLP, time-series forecasting, uncertainty analysis, and privacy-oriented data transformation.
+My current interest is the use of statistics and machine learning in clinical research and perioperative medicine.
 
 ## Featured projects
 
-| Project | Focus | Methods / tools | Key result |
-|---|---|---|---|
-| [Customer Churn Prediction](customer_churn_prediction_for_telecom_company/) | Classification | CatBoost, LightGBM, Random Forest, feature engineering | Test ROC-AUC **0.914** |
-| [Toxic Comment Classification](classifying_comments/) | NLP | TF-IDF, Logistic Regression, pipelines, GridSearchCV | Test F1 **0.78** |
-| [Taxi Demand Forecasting](taxi_demand_forecasting/) | Time series | lag features, rolling statistics, CatBoost | Test RMSE **39.54** |
-| [Oil Region Selection](oil_region_selection/) | Decision under uncertainty | regression, bootstrap, confidence intervals, risk estimation | Model output linked to profit/risk analysis |
-| [Gold Recovery Prediction](machine_learning_model_for_a_metalworking_enterprise/) | Regression | Random Forest, custom sMAPE, cross-validation | Test final sMAPE **6.44** |
-| [Privacy-Preserving Data Transformation](privacy_preserving_data/) | Data privacy / linear algebra | invertible matrix transformation, Linear Regression | Predictive quality preserved after transformation |
+| Project | Focus | Main result |
+|---|---|---|
+| [Customer Churn Prediction](customer_churn_prediction_for_telecom_company/) | Predicting telecom customer churn from contract, service, and billing data. | CatBoost achieved a test ROC-AUC of 0.914 and accuracy of 0.925. |
+| [Toxic Comment Classification](classifying_comments/) | Classifying user comments for moderation with TF-IDF and linear models. | The selected Logistic Regression pipeline achieved test F1 = 0.78 and ROC-AUC = 0.87. |
+| [Taxi Demand Forecasting](taxi_demand_forecasting/) | Forecasting the number of airport taxi orders one hour ahead. | CatBoost achieved test RMSE = 39.54, compared with 58.8 for the naive baseline. |
+| [Oil Region Selection with Bootstrap Risk Analysis](oil_region_selection/) | Selecting a drilling region under budget and downside-risk constraints. | Region 2 was recommended: estimated mean profit RUB 536.4 million, 95% interval RUB 110 million–1.00 billion, and 0.3% loss risk. |
+| [Gold Recovery Prediction](machine_learning_model_for_a_metalworking_enterprise/) | Predicting recovery efficiency at two stages of an ore-processing workflow. | The selected Random Forest produced test weighted sMAPE = 6.4367 versus 7.0453 for the constant baseline. |
+| [Privacy-Preserving Data Transformation](privacy_preserving_data/) | Protecting personal features with an invertible linear transformation while preserving regression quality. | R² remained 0.435 before and after transformation. |
 
-## Technical areas
+## Technical stack
 
-Python · pandas · NumPy · scikit-learn · CatBoost · LightGBM · Matplotlib · NLP · feature engineering · cross-validation · time-series analysis · bootstrap · model evaluation
+Python, pandas, NumPy, scikit-learn, CatBoost, LightGBM, matplotlib, seaborn, spaCy, NLTK, statsmodels, SciPy.
 
-## About the projects
+## Notes
 
-These are educational projects completed during the Yandex Practicum Data Science program. They are presented here as evidence of practical training across different types of data and modeling tasks. The portfolio descriptions have been edited for clarity, while the reported results come from the completed analyses.
-
-My current professional interest is the application of data science and machine learning to clinical and perioperative research.
+- These projects were completed during the Yandex Practicum Data Science programme.
+- Portfolio notebooks were edited for clarity: reviewer correspondence and training-platform checklists were removed.
+- Reported metrics come from the original completed analyses; no results were invented or inflated.
+- Source datasets are not redistributed where licensing or course-access restrictions apply.
