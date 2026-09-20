@@ -1,22 +1,12 @@
-# Проект для Интернет-магазина «Викишоп»
-Интернет-магазин «Викишоп» запускает новый сервис. Теперь пользователи могут редактировать и дополнять описания товаров, как в вики-сообществах. То есть клиенты предлагают свои правки и комментируют изменения других. Магазину нужен инструмент, который будет искать токсичные комментарии и отправлять их на модерацию.
+# Toxic Comment Classification
 
-## Задачи:
-Обучить модель классифицировать комментарии на позитивные и негативные (в нашем распоряжении набор данных с разметкой о токсичности правок). 
+The task was to build a moderation model that flags toxic comments.
 
-## Используемые библиотеки:
-1. **Обработка текста и машинное обучение:**
-   - scikit-learn: векторизация текста, модели ML (e.g., `LogisticRegression`), метрики оценки (e.g., `f1_score`)
-   - LightGBM, CatBoost: модели градиентного бустинга
+I used TF-IDF features and compared several classifiers, including Logistic Regression, Ridge, SGD and LightGBM. Model selection was based mainly on F1 because the target classes were imbalanced.
 
-2. **Анализ данных и визуализация:**
-   - pandas, numpy: обработка и анализ данных
-   - matplotlib: визуализация данных
-   - nltk: обработка текста, токенизация, анализ слов
+Logistic Regression gave the best final result.
 
-3. **Другие утилиты:**
-   - spacy: обработка текста
-   - tqdm: отображение прогресса
-  
-## Статус проекта:
-Закончен.
+- F1 on the test set: **0.78**
+- ROC-AUC on the test set: **0.87**
+
+The repository contains the original notebook and a shorter `analysis.py` with the main modeling workflow.

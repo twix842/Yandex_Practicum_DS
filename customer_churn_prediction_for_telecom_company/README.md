@@ -1,34 +1,16 @@
-# Проект: Прототип модели машинного обучения для «Оператора связи "Ниединогоразрыва.ком"».
-Оператор связи «Ниединогоразрыва.ком» хочет научиться прогнозировать отток клиентов. Если выяснится, что пользователь планирует уйти, ему будут предложены промокоды и специальные условия. В нашем распоряжении были данные о некоторых клиентах, информацию об их тарифах и договорах.
+# Customer Churn Prediction
 
-## Задачи:
-1. На тренировочной выборке обучить разные модели, одна из которых — бустинг (LightGBM, Catboost), и как минимум одна — не бустинг (RandomForest); для каждой модели попробовать разные гиперпараметры;
-2. Проанализировать AUC-ROC и Accuracy моделей;
-3. Опираясь на критерии заказчика, выбрать лучшую модель, проверить её качество на тестовой выборке.
+This was the final project of the Yandex Practicum Data Science program.
 
-## Используемые библиотеки:
-1. **Библиотеки для анализа данных и визуализации:**
-   - pandas: для работы с данными в табличной форме
-   - numpy: для операций с числами и массивами
-   - matplotlib.pyplot, seaborn: для визуализации данных
-   - pandas_profiling, sweetviz: для создания отчетов по данным
+The goal was to predict customer churn for a telecom company using contract, service and customer data. I worked through data integration, preprocessing, feature engineering and model comparison, then evaluated the selected model on a separate test set.
 
-2. **Препроцессинг данных и моделирование:**
-   - sklearn.preprocessing: OneHotEncoder, OrdinalEncoder, StandardScaler для предобработки данных
-   - sklearn.model_selection: train_test_split, GridSearchCV, cross_val_score, cross_val_predict для работы с моделями и оценки
-   - sklearn.metrics: метрики для оценки моделей (e.g., roc_auc_score, accuracy_score)
+I compared Random Forest, LightGBM and CatBoost. CatBoost performed best.
 
-3. **Модели машинного обучения:**
-   - CatBoostClassifier, LGBMClassifier, RandomForestClassifier: модели классификации
-   - phik: библиотека для анализа корреляции фи
+**Final test metrics**
 
-4. **Другие утилиты и инструменты:**
-   - cv from catboost: для кросс-валидации в CatBoost
-   - copy, datetime, random, time: стандартные библиотеки Python для операций с данными и временем
-   - warnings: для управления предупреждениями
+- ROC-AUC: **0.914**
+- Accuracy: **0.925**
 
-5. **Ускорение операций:**
-   - pandarallel: для параллельных вычислений с Pandas
-  
-## Статус проекта:
-Закончен.
+I also reviewed feature importance to understand which variables contributed most to the model.
+
+The full notebook contains the complete analysis; `analysis.py` is a compact version of the modeling stage.

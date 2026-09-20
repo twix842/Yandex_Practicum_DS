@@ -1,11 +1,26 @@
-# Портфолио проектов
+# Data Science Portfolio
 
-Добро пожаловать в моё портфолио! Ниже представлены некоторые из моих проектов, которые были мною выполнены в ходе обучения в Яндекс.Практикуме по профессии "Специалист по Data Science".
+Selected projects from my Data Science training at Yandex Practicum.
 
-## Описание проектов
+I am a physician with a professional interest in clinical research, statistics, and machine learning. This repository documents my general data-science training outside medicine and includes tabular machine learning, NLP, time-series forecasting, uncertainty analysis, and privacy-oriented data transformation.
 
-| № | Название проекта                          | Краткое описание                                | Используемые библиотеки                       |
-|---|-----------------------------------------|-------------------------------------------------|-------------------------------------------|
-| 1 | [Machine Learning Model for Metalworking Enterprise](https://github.com/twix842/Portfolio/blob/main/machine_learning_model_for_a_metalworking_enterprise/machine_learning_model_for_a_metalworking_enterprise.ipynb) | Исследование технологического процесса очистки золота | Python, pandas, numpy, matplotlib, seaborn, IPython.display, DecisionTreeRegressor, RandomForestRegressor, LinearRegression, DummyRegressor, sklearn.model_selection, sklearn.metrics |
-| 2 | [Сlassifying comments](https://github.com/twix842/Portfolio/blob/main/classifying_comments/classifying_comments.ipynb)                     | Обучение модели классификации комментариев         | Python, scikit-learn, LightGBM, CatBoost, pandas, numpy, matplotlib, nltk, spacy, tqdm |
-| 3 | [Customer Churn Prediction for Telecom Company](https://github.com/twix842/Portfolio/blob/main/customer_churn_prediction_for_telecom_company/customer_churn_prediction_for_telecom_company.ipynb) | Прогнозирование оттока телеком компании          | Python, pandas, numpy, matplotlib, seaborn, pandas_profiling, sweetviz, scikit-learn, CatBoost, LightGBM, phik, pandarallel |
+## Featured projects
+
+| Project | Focus | Methods / tools | Key result |
+|---|---|---|---|
+| [Customer Churn Prediction](customer_churn_prediction_for_telecom_company/) | Classification | CatBoost, LightGBM, Random Forest, feature engineering | Test ROC-AUC **0.914** |
+| [Toxic Comment Classification](classifying_comments/) | NLP | TF-IDF, Logistic Regression, pipelines, GridSearchCV | Test F1 **0.78** |
+| [Taxi Demand Forecasting](taxi_demand_forecasting/) | Time series | lag features, rolling statistics, CatBoost | Test RMSE **39.54** |
+| [Oil Region Selection](oil_region_selection/) | Decision under uncertainty | regression, bootstrap, confidence intervals, risk estimation | Model output linked to profit/risk analysis |
+| [Gold Recovery Prediction](machine_learning_model_for_a_metalworking_enterprise/) | Regression | Random Forest, custom sMAPE, cross-validation | Test final sMAPE **6.44** |
+| [Privacy-Preserving Data Transformation](privacy_preserving_data/) | Data privacy / linear algebra | invertible matrix transformation, Linear Regression | Predictive quality preserved after transformation |
+
+## Technical areas
+
+Python · pandas · NumPy · scikit-learn · CatBoost · LightGBM · Matplotlib · NLP · feature engineering · cross-validation · time-series analysis · bootstrap · model evaluation
+
+## About the projects
+
+These are educational projects completed during the Yandex Practicum Data Science program. They are presented here as evidence of practical training across different types of data and modeling tasks. The portfolio descriptions have been edited for clarity, while the reported results come from the completed analyses.
+
+My current professional interest is the application of data science and machine learning to clinical and perioperative research.
