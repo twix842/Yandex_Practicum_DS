@@ -1,22 +1,16 @@
 # Customer Churn Prediction
 
-## Objective
-Develop a machine-learning model to identify telecom customers at risk of churn.
+This was the final project of the Yandex Practicum Data Science program.
 
-## Approach
-The work included data integration and preprocessing, exploratory analysis, feature engineering, model comparison, cross-validation, and final evaluation on a held-out test set.
+The goal was to predict customer churn for a telecom company using contract, service and customer data. I worked through data integration, preprocessing, feature engineering and model comparison, then evaluated the selected model on a separate test set.
 
-**Models:** CatBoost, LightGBM, Random Forest.
+I compared Random Forest, LightGBM and CatBoost. CatBoost performed best.
 
-**Primary metric:** ROC-AUC. Accuracy was used as an additional descriptive metric.
+**Final test metrics**
 
-## Results
-CatBoost produced the strongest final performance:
+- ROC-AUC: **0.914**
+- Accuracy: **0.925**
 
-- Test ROC-AUC: **0.914**
-- Test accuracy: **0.925**
+I also reviewed feature importance to understand which variables contributed most to the model.
 
-Feature importance was also examined to understand which variables contributed most to the model.
-
-## Skills demonstrated
-Tabular machine learning · feature engineering · categorical data · CatBoost · LightGBM · Random Forest · cross-validation · ROC-AUC · feature importance
+The full notebook contains the complete analysis; `analysis.py` is a compact version of the modeling stage.
