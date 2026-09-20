@@ -1,9 +1,19 @@
-# Oil Region Selection
+# Oil Region Selection with Bootstrap Risk Analysis
 
-This project combines regression with a simple decision-under-uncertainty problem.
+Selecting a drilling region under budget and downside-risk constraints.
 
-A Linear Regression model was trained for each of three candidate regions. The predictions were then used to select promising wells and estimate expected profit. I used bootstrap resampling to calculate the distribution of possible profit and estimate the probability of loss.
+## Result
 
-What I find useful about this project is that the model is not treated as the final answer. Its predictions are passed into a separate economic and risk analysis.
+Region 2 was recommended: estimated mean profit RUB 536.4 million, 95% interval RUB 110 million–1.00 billion, and 0.3% loss risk.
 
-The code in `analysis.py` contains the main modeling and bootstrap workflow.
+## What this project demonstrates
+
+Regression, bootstrap, uncertainty estimation, risk analysis, business decision modelling.
+
+## Notebook
+
+See [`oil_region_selection.ipynb`](oil_region_selection.ipynb) for the complete analysis.
+
+## Data availability
+
+This project was completed as part of the Yandex Practicum Data Science programme. The original dataset is not redistributed here. Paths may need to be adjusted before rerunning the notebook in a different environment.

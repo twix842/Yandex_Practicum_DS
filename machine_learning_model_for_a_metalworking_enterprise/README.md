@@ -1,15 +1,19 @@
 # Gold Recovery Prediction
 
-This project uses industrial process data from gold ore processing.
+Predicting recovery efficiency at two stages of an ore-processing workflow.
 
-The main difficulty was that the target had to be predicted at two stages of the process, and the final score was calculated with a weighted sMAPE metric. Before modeling, I checked the recovery calculation, compared the train and test feature sets and examined changes in metal concentrations across processing stages.
+## Result
 
-I compared Linear Regression, Decision Tree and Random Forest models with cross-validation. A constant model was used as a baseline.
+The selected Random Forest produced test weighted sMAPE = 6.4367 versus 7.0453 for the constant baseline.
 
-**Result**
+## What this project demonstrates
 
-- Random Forest cross-validation total sMAPE: **7.70**
-- Test total sMAPE: **6.44**
-- Constant baseline test total sMAPE: **7.05**
+Regression, industrial process data, custom metrics, cross-validation, random forest.
 
-The full notebook includes the process-data analysis; `analysis.py` focuses on the model-selection part.
+## Notebook
+
+See [`machine_learning_model_for_a_metalworking_enterprise.ipynb`](machine_learning_model_for_a_metalworking_enterprise.ipynb) for the complete analysis.
+
+## Data availability
+
+This project was completed as part of the Yandex Practicum Data Science programme. The original dataset is not redistributed here. Paths may need to be adjusted before rerunning the notebook in a different environment.

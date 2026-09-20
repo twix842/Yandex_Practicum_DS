@@ -1,12 +1,19 @@
 # Toxic Comment Classification
 
-The task was to build a moderation model that flags toxic comments.
+Classifying user comments for moderation with TF-IDF and linear models.
 
-I used TF-IDF features and compared several classifiers, including Logistic Regression, Ridge, SGD and LightGBM. Model selection was based mainly on F1 because the target classes were imbalanced.
+## Result
 
-Logistic Regression gave the best final result.
+The selected Logistic Regression pipeline achieved test F1 = 0.78 and ROC-AUC = 0.87.
 
-- F1 on the test set: **0.78**
-- ROC-AUC on the test set: **0.87**
+## What this project demonstrates
 
-The repository contains the original notebook and a shorter `analysis.py` with the main modeling workflow.
+Nlp, spacy, tf-idf, imbalanced classification, pipelines, cross-validation.
+
+## Notebook
+
+See [`classifying_comments.ipynb`](classifying_comments.ipynb) for the complete analysis.
+
+## Data availability
+
+This project was completed as part of the Yandex Practicum Data Science programme. The original dataset is not redistributed here. Paths may need to be adjusted before rerunning the notebook in a different environment.
