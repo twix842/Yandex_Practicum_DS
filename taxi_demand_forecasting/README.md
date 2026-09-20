@@ -1,13 +1,11 @@
 # Taxi Demand Forecasting
 
-## Objective
-Forecast taxi demand for the next hour to support driver allocation during periods of high demand.
+The aim of this project was to predict the number of taxi orders for the next hour.
 
-## Approach
-The time series was resampled to hourly observations and examined for trend and seasonality. Calendar variables, lagged observations and rolling statistics were used as predictive features. Several regression models were compared with time-aware validation.
+I resampled the time series to hourly observations, looked at trend and seasonality, and created calendar, lag and rolling-mean features. Because this is time-series data, validation was performed with `TimeSeriesSplit` rather than random cross-validation.
 
-## Result
-CatBoost achieved a test RMSE of **39.54**, meeting the project requirement of RMSE below 48.
+Several regression models were compared. CatBoost produced the best final result.
 
-## Skills demonstrated
-Time series · feature engineering · lag features · rolling statistics · time-aware validation · CatBoost · RMSE
+**Test RMSE: 39.54**
+
+The project requirement was RMSE below 48.
