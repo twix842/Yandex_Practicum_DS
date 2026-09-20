@@ -1,21 +1,15 @@
 # Gold Recovery Prediction
 
-## Objective
-Predict gold-recovery efficiency at different stages of an industrial ore-processing workflow.
+This project uses industrial process data from gold ore processing.
 
-## Approach
-The analysis included validation of the recovery calculation, comparison of train and test features, investigation of metal concentrations across processing stages, assessment of feed-particle distributions, and regression modeling with cross-validation.
+The main difficulty was that the target had to be predicted at two stages of the process, and the final score was calculated with a weighted sMAPE metric. Before modeling, I checked the recovery calculation, compared the train and test feature sets and examined changes in metal concentrations across processing stages.
 
-Two recovery targets were predicted, and model quality was assessed using the project-specific weighted sMAPE metric.
+I compared Linear Regression, Decision Tree and Random Forest models with cross-validation. A constant model was used as a baseline.
 
-**Models:** Random Forest Regressor, Decision Tree Regressor, Linear Regression, and a constant baseline.
+**Result**
 
-## Results
-Random Forest provided the strongest cross-validation result.
+- Random Forest cross-validation total sMAPE: **7.70**
+- Test total sMAPE: **6.44**
+- Constant baseline test total sMAPE: **7.05**
 
-- Cross-validation final sMAPE: **7.70**
-- Test final sMAPE: **6.44**
-- Constant baseline test final sMAPE: **7.05**
-
-## Skills demonstrated
-Regression · industrial process data · exploratory analysis · custom metrics · cross-validation · Random Forest · baseline comparison
+The full notebook includes the process-data analysis; `analysis.py` focuses on the model-selection part.
