@@ -1,22 +1,22 @@
-# Проект для Интернет-магазина «Викишоп»
-Интернет-магазин «Викишоп» запускает новый сервис. Теперь пользователи могут редактировать и дополнять описания товаров, как в вики-сообществах. То есть клиенты предлагают свои правки и комментируют изменения других. Магазину нужен инструмент, который будет искать токсичные комментарии и отправлять их на модерацию.
+# Toxic Comment Classification
 
-## Задачи:
-Обучить модель классифицировать комментарии на позитивные и негативные (в нашем распоряжении набор данных с разметкой о токсичности правок). 
+## Objective
+Build a model that identifies toxic user comments for automatic moderation.
 
-## Используемые библиотеки:
-1. **Обработка текста и машинное обучение:**
-   - scikit-learn: векторизация текста, модели ML (e.g., `LogisticRegression`), метрики оценки (e.g., `f1_score`)
-   - LightGBM, CatBoost: модели градиентного бустинга
+## Approach
+The project treats moderation as a binary text-classification problem. Text was prepared for modeling and represented with TF-IDF features. Several linear and gradient-boosting classifiers were compared using reproducible pipelines and hyperparameter search.
 
-2. **Анализ данных и визуализация:**
-   - pandas, numpy: обработка и анализ данных
-   - matplotlib: визуализация данных
-   - nltk: обработка текста, токенизация, анализ слов
+**Models:** Logistic Regression, Ridge Classifier, SGD Classifier, LightGBM.
 
-3. **Другие утилиты:**
-   - spacy: обработка текста
-   - tqdm: отображение прогресса
-  
-## Статус проекта:
-Закончен.
+**Evaluation:** F1 score was the primary metric; ROC-AUC was also examined.
+
+## Results
+Logistic Regression provided the strongest overall performance and was selected for final testing.
+
+- Test F1: **0.78**
+- Test ROC-AUC: **0.87**
+
+The result exceeded the project requirement of F1 ≥ 0.75.
+
+## Skills demonstrated
+NLP · TF-IDF · text preprocessing · scikit-learn pipelines · GridSearchCV · binary classification · F1 · ROC-AUC · LightGBM
