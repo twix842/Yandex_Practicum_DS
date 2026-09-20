@@ -1,31 +1,21 @@
-# Проект: "Прототип модели машинного обучения для «Цифры»."
-Компания «Цифра» разрабатывает решения для эффективной работы промышленных предприятий. Модель должна предсказать коэффициент восстановления золота из золотосодержащей руды. В нашем распоряжении были данные с параметрами добычи и очистки. Модель должна помочь оптимизировать производство, чтобы не запускать предприятие с убыточными характеристиками.
+# Gold Recovery Prediction
 
-## Задачи:
-1. Проверить, что эффективность обогащения рассчитана правильно. Вычислить её на обучающей выборке для признака rougher.output.recovery. Найти MAE между нашими расчётами и значением признака.
-2. Проанализировать признаки, недоступные в тестовой выборке.
-3. Посмотреть, как меняется концентрация металлов (Au, Ag, Pb) на различных этапах очистки.
-4. Сравнить распределения размеров гранул сырья на обучающей и тестовой выборках.
-5. Исследовать суммарную концентрацию всех веществ на разных стадиях: в сырье, в черновом и финальном концентратах.
-6. Написать функцию для вычисления итоговой sMAPE. Обучить разные модели и оценить их качество кросс-валидацией. Выбрать лучшую модель и проверить её на тестовой выборке.
+## Objective
+Predict gold-recovery efficiency at different stages of an industrial ore-processing workflow.
 
-## Используемые библиотеки:
-1. **Библиотеки для анализа данных и визуализации:**
-   - pandas: для работы с данными в табличной форме
-   - numpy: для выполнения операций с числами и массивами
-   - matplotlib.pyplot: для создания графиков
-   - seaborn: для более продвинутой визуализации данных
-   - IPython.display: для отображения данных в блокноте Jupyter
+## Approach
+The analysis included validation of the recovery calculation, comparison of train and test features, investigation of metal concentrations across processing stages, assessment of feed-particle distributions, and regression modeling with cross-validation.
 
-2. **Модели машинного обучения для регрессии:**
-   - DecisionTreeRegressor: регрессионное дерево
-   - RandomForestRegressor: случайный лес для регрессии
-   - LinearRegression: линейная регрессия
-   - DummyRegressor: простая модель-заглушка для сравнения
+Two recovery targets were predicted, and model quality was assessed using the project-specific weighted sMAPE metric.
 
-3. **Библиотеки и утилиты для оценки моделей:**
-   - sklearn.model_selection: для кросс-валидации и настройки гиперпараметров моделей
-   - sklearn.metrics: для вычисления метрик регрессии, таких как средняя абсолютная ошибка (MAE)
-  
-## Статус проекта:
-Закончен.
+**Models:** Random Forest Regressor, Decision Tree Regressor, Linear Regression, and a constant baseline.
+
+## Results
+Random Forest provided the strongest cross-validation result.
+
+- Cross-validation final sMAPE: **7.70**
+- Test final sMAPE: **6.44**
+- Constant baseline test final sMAPE: **7.05**
+
+## Skills demonstrated
+Regression · industrial process data · exploratory analysis · custom metrics · cross-validation · Random Forest · baseline comparison
