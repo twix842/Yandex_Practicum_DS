@@ -1,13 +1,9 @@
-# Oil Region Selection with Bootstrap Risk Analysis
+# Oil Region Selection
 
-## Objective
-Use predictive modeling to select a region for new oil-well development while accounting for expected profit and the risk of loss.
+This project combines regression with a simple decision-under-uncertainty problem.
 
-## Approach
-A regression model was trained separately for each candidate region. Predicted reserves were then combined with the economic assumptions of the project. Bootstrap resampling was used to estimate the distribution of potential profit, confidence intervals and loss risk.
+A Linear Regression model was trained for each of three candidate regions. The predictions were then used to select promising wells and estimate expected profit. I used bootstrap resampling to calculate the distribution of possible profit and estimate the probability of loss.
 
-## Why this project is useful
-The project goes beyond point prediction: model output is incorporated into a decision process under uncertainty.
+What I find useful about this project is that the model is not treated as the final answer. Its predictions are passed into a separate economic and risk analysis.
 
-## Skills demonstrated
-Regression · validation · simulation · bootstrap · confidence intervals · risk estimation · decision analysis
+The code in `analysis.py` contains the main modeling and bootstrap workflow.
